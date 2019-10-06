@@ -103,6 +103,13 @@ def index(request):
 
 @loginValid
 def goods_list(request, status, page=1):
+    """
+    分页功能：利用 Django 自带的分页器 Paginator 对列表页商品进行分页
+    :param request:
+    :param status:
+    :param page:
+    :return:
+    """
     user_id = request.COOKIES.get("user_id")
     user = User.objects.get(id=int(user_id))
     page = int(page)

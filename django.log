@@ -3,3 +3,75 @@
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "Seller_goodstype"."id", "Seller_goodstype"."type_label", "Seller_goodstype"."type_description", "Seller_goodstype"."picture" FROM "Seller_goodstype"; args=()
+(0.001) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 1 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(1,)
+(0.000) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 2 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(2,)
+(0.000) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 3 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(3,)
+(0.000) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 4 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(4,)
+(0.000) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 5 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(5,)
+(0.000) SELECT "Seller_goods"."id", "Seller_goods"."goods_number", "Seller_goods"."goods_name", "Seller_goods"."goods_price", "Seller_goods"."goods_count", "Seller_goods"."goods_location", "Seller_goods"."goods_safe_date", "Seller_goods"."goods_pro_time", "Seller_goods"."goods_status", "Seller_goods"."goods_description", "Seller_goods"."picture", "Seller_goods"."goods_type_id", "Seller_goods"."goods_store_id" FROM "Seller_goods" WHERE "Seller_goods"."goods_type_id" = 6 ORDER BY "Seller_goods"."goods_pro_time" DESC; args=(6,)
+Exception while resolving variable 'username' in template 'buyer/index.html'.
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in {'csrftoken': '63SQiblieSv6VAuZwsIa6aEfwbctsYW9KxnZcpcVEkUGWvvLcfT1afnultsnmd5w'}
+Exception while resolving variable 'goods_count' in template 'buyer/index.html'.
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'goods_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'goods_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'goods_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hqj\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [goods_count] in [{'False': False, 'True': True, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000000000524E9D8>>, 'request': <WSGIRequest: GET '/'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'INFO': 20, 'DEBUG': 10, 'WARNING': 30, 'SUCCESS': 25}, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000000000524EB70>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000000006319668>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000000004E26C18>}, {}, {'goods': <QuerySet [<Goods: Goods object (8)>]>, 'ty': <GoodsType: GoodsType object (6)>, 'request': <WSGIRequest: GET '/'>, 'result': [{'type': <GoodsType: GoodsType object (1)>, 'goods_list': [<Goods: Goods object (11)>, <Goods: Goods object (6)>, <Goods: Goods object (10)>, <Goods: Goods object (12)>]}, {'type': <GoodsType: GoodsType object (3)>, 'goods_list': [<Goods: Goods object (9)>, <Goods: Goods object (16)>, <Goods: Goods object (17)>, <Goods: Goods object (20)>]}], 'goods_type': <QuerySet [<GoodsType: GoodsType object (1)>, <GoodsType: GoodsType object (2)>, <GoodsType: GoodsType object (3)>, <GoodsType: GoodsType object (4)>, <GoodsType: GoodsType object (5)>, <GoodsType: GoodsType object (6)>]>}]
+"GET / HTTP/1.1" 200 7483
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
