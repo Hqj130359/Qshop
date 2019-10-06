@@ -131,6 +131,11 @@ import datetime
 
 @loginValid
 def pay_order(request):
+    """
+    购买单个商品
+    :param request:
+    :return:
+    """
     goods_id = request.GET.get("goods_id")
     count = request.GET.get("count")
     if goods_id and count:
@@ -162,6 +167,11 @@ def pay_order(request):
 
 @loginValid
 def pay_order_more(request):
+    """
+    购物车购买多个商品
+    :param request:
+    :return:
+    """
     data = request.GET
     data_item = data.items()
     request_data = []
@@ -204,6 +214,11 @@ from Qshop.settings import alipay_public_key_string, alipay_private_key_string
 
 
 def AliPayViews(request):
+    """
+    可以使用支付宝支付
+    :param request:
+    :return:
+    """
     order_number = request.GET.get("order_number")
     order_total = request.GET.get("total")
 
@@ -231,6 +246,9 @@ def AliPayViews(request):
 
 
 def pay_result(request):
+    """
+    支付后返回的结果
+    """
     out_trade_no = request.GET.get("out_trade_no")
     if out_trade_no:
         order = PayOrder.objects.get(order_number=out_trade_no)
