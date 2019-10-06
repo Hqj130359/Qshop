@@ -8,6 +8,11 @@ from alipay import AliPay
 
 
 def loginValid(fun):
+    """
+    校验功能：查看cookie的用户 与session的用户是否一致。不一致返回登录页。一致进入首页
+    :param fun:
+    :return:
+    """
     def inner(request, *args, **kwargs):
         cookie_user = request.COOKIES.get('username')
         session_user = request.session.get('username')
