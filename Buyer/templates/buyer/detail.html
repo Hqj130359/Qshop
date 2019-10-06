@@ -111,19 +111,19 @@
                 "count": count,
                 "csrfmiddlewaretoken": csrf_token
             };
-            $.ajax(
+            $.ajax( //创建ajax对象
                 {
-                    url: "/Buyer/add_cart/",
-                    type: "POST",
-                    data: sendData,
-                    success: function (data) {
+                    url: "/Buyer/add_cart/",  //路由
+                    type: "POST", //请求的方式
+                    data: sendData, //请求的数据
+                    success: function (data) { //请求成功要执行的函数
                         alert(data["data"])
                     },
-                    error: function (error) {
+                    error: function (error) { //请求失败的函数
                         console.log(error)
                     }
                 }
             )
-        }
+        }//ajax提交 加入购物车
     </script>
 {% endblock %}
