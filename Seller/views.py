@@ -126,6 +126,10 @@ def goods_list(request, status, page=1):
 
 @loginValid
 def goods_status(request, state, id):
+    """
+    列表数据流程操作
+    根据前段的数据来进行上架 下架
+    """
     id = int(id)
     goods = Goods.objects.get(id=id)
     if state == "up":
